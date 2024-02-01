@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 from fabric.api import local, put, run, env, cd, sudo
-from datetime import date
+from datetime import datetime
 from os import path
+from os.path import exists
 
 
 def do_pack():
