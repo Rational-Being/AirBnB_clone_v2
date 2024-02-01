@@ -22,8 +22,8 @@ def do_pack():
         return None
 
 
-env.user = "ubuntu"
-env.hosts = ["54.82.20.76", "100.26.161.177"]
+env.user = 'ubuntu'
+env.hosts = ['54.82.20.76','100.26.161.177']
 
 
 def do_deploy(archive_path):
@@ -56,7 +56,7 @@ def deploy():
     """
     try:
         archive_path = do_pack()
-    except Exception as e:
+    except BaseException:
         return False
 
     return do_deploy(archive_path)
