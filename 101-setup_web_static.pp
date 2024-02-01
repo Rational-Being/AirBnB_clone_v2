@@ -1,4 +1,4 @@
-#puppet 
+#puppet file that perform the same funtion as 0-setup_web_static.sh
 
 exec { 'update':
     command => '/usr/bin/env apt-get -y update'}
