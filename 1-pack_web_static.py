@@ -4,7 +4,7 @@ this script will perform the funtion of do_pack
 """
 
 from fabric.api import local
-from datetime import date
+from datetime import datetime
 from os import path
 
 
