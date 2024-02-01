@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-from fabric.api import local
-from datetime import date
+from fabric.api import local, put, run, env
+from datetime import datetime
 from os import path
+from os.path import exists
 
 def do_pack():
     """
@@ -18,17 +19,13 @@ def do_pack():
     except Exception as e:
         return None
 
-#!/usr/bin/python3
-#
-
-from datetime import datetime
-from fabric.api import local, put, run, env
-from os.path import exists
-
 env.user = 'ubuntu'
 env.hosts = ['54.82.20.76', '100.26.161.177']
 
 def do_deploy(archive_path):
+    """
+    this is funtion has been described in 2-do_deploy_web_Static file
+    """
     
     if not exists(archive_path):
         return False
@@ -50,7 +47,7 @@ def do_deploy(archive_path):
     
 def deploy():
     """
-    
+    this funtion createsand sitributes an archive to my web servers
     """
     try:
         archive_path = do_pack()

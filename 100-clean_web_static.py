@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from fabric.api import local
+from fabric.api import local, put, run, env, cd, sudo
 from datetime import date
 from os import path
 
@@ -18,19 +18,12 @@ def do_pack():
     except Exception as e:
         return None
 
-#!/usr/bin/python3
-#
-
-from datetime import datetime
-from fabric.api import local, put, run, env, sudo, cd
-from os.path import exists
-
 env.user = 'ubuntu'
 env.hosts = ['54.82.20.76', '100.26.161.177']
 
 def do_deploy(archive_path):
     """
-    
+    tis funtion has been defined in a previous file
     """
     if not exists(archive_path):
         return False
@@ -52,7 +45,7 @@ def do_deploy(archive_path):
     
 def deploy():
     """
-    
+    also thesi funtion too
     """
     try:
         archive_path = do_pack()
@@ -63,7 +56,7 @@ def deploy():
 
 def do_clean(number=0):
     """
-    
+    this funtiion deletes out of date archives
     """
     if number == 0 or number == 1:
         with cd.local('./versions/'):

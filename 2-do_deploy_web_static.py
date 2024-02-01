@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-#
+"""
+this script distributes an archive to my web servers
+"""
 
 from datetime import datetime
 from fabric.api import local, put, run, env
@@ -9,7 +11,9 @@ env.user = 'ubuntu'
 env.hosts = ['54.82.20.76', '100.26.161.177']
 
 def do_deploy(archive_path):
-    
+    """
+    this funtion performs te funtion in the comment above
+    """
     if not exists(archive_path):
         return False
     try:

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+#this script install nginx and setup the serve r for deployment
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
