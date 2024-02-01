@@ -8,7 +8,7 @@ sudo apt-get -y install nginx
 
 sudo mkdir -p /data/web_static/shared /data/web_static/releases/test
 sudo touch /data/web_static/releases/test/index.html
-sudo cat >> /data/web_static/releases/test/index.html << EOF
+cat >> /data/web_static/releases/test/index.html << EOF
 
 <html>
 <head>
