@@ -1,0 +1,1 @@
+In this folder, i will continue building my airbnb project by using flask to build its backend
